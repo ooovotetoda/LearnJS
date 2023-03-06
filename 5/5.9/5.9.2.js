@@ -1,5 +1,5 @@
 function count(obj) {
-    return Object.keys(obj).length;
+    return Object.entries(obj).length;
 }
 
 let user = {

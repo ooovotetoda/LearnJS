@@ -1,11 +1,5 @@
-function sumSalaries(salaries) {
-
-    let sum = 0;
-    for (let salary of Object.values(salaries)) {
-        sum += salary;
-    }
-
-    return sum;
+function sumSalaries(obj) {
+    return Object.entries(obj).reduce((sum, [name, amount]) => sum + +amount, 0);
 }
 
 let salaries = {
@@ -14,4 +8,4 @@ let salaries = {
     "Mary": 250
 };
 
-console.log( sumSalaries(salaries) );
+console.log( sumSalaries(salaries) ); // 650
